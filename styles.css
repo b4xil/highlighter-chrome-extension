@@ -13,12 +13,12 @@
   gap: 10px;
 }
 
-/* Text */
+
 #highlight-popup span {
   font-weight: 500;
 }
 
-/* Base button */
+
 #highlight-popup button {
   border: none;
   padding: 5px 10px;
@@ -28,19 +28,19 @@
   transition: background 0.2s ease, transform 0.1s ease;
 }
 
-/* YES (subtle green) */
+
 #highlight-popup .yes-btn {
   background: #e6f4ea;
   color: #1e7e34;
 }
 
-/* NO (subtle red) */
+
 #highlight-popup .no-btn {
   background: #fdecea;
   color: #b02a37;
 }
 
-/* Hover (very subtle) */
+
 #highlight-popup button:hover {
   transform: translateY(-1px);
 }

@@ -4,7 +4,7 @@ let lastSelection = "";
 document.addEventListener("mouseup", (event) => {
   const selection = window.getSelection().toString().trim();
 
-  // Prevent duplicate popup for same selection
+  // Prevent duplicates
   if (selection.length > 0 && selection !== lastSelection) {
     lastSelection = selection;
     showSavePopup(event.pageX, event.pageY, selection);
@@ -24,11 +24,10 @@ function showSavePopup(x, y, text) {
     <button class="no-btn">No</button>
   `;
 
-  // Position slightly below selection
+
   popup.style.top = y + 10 + "px";
   popup.style.left = x + "px";
 
-  // YES → save
 popup.querySelector(".yes-btn").onclick = () => {
   chrome.runtime.sendMessage({
     type: "SAVE_HIGHLIGHT",
@@ -40,13 +39,13 @@ popup.querySelector(".yes-btn").onclick = () => {
   });
 
   popup.remove();
-  lastSelection = ""; // ✅ reset
+  lastSelection = ""; // 
 };
 
-  // NO → just close
+
   popup.querySelector(".no-btn").onclick = () => {
     popup.remove();
-    lastSelection = ""; // ✅ reset
+    lastSelection = ""; 
 };
 
   document.body.appendChild(popup);

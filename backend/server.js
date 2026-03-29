@@ -28,7 +28,7 @@ app.post("/summarize", async (req, res) => {
 
     console.log("OpenAI FULL response:", JSON.stringify(data, null, 2));
 
-    // ✅ FIXED SUMMARY LOGIC
+
     let summary = "No summary generated";
 
     if (data.output_text) {
