@@ -39,7 +39,7 @@ popup.querySelector(".yes-btn").onclick = () => {
   });
 
   popup.remove();
-  lastSelection = ""; // 
+  lastSelection = ""; 
 };
 
 
